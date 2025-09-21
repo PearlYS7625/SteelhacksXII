@@ -9,7 +9,7 @@ def analyze_data(data):
         streak = 1
         for i in range(1, len(dates)):
             # if previous date is exactly 1 day before current
-            if (dates[i-1] - dates[i]).days == 1:
+            if (dates[i-1] - dates[i]).days == 1 or (dates[i-1] - dates[i]).days == 0:
                 streak += 1
             else:
                 break
