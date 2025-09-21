@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScribeStats - Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+ <body>
+    <!-- Pink banner (empty, just background) -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="{{ url_for('home_page') }}">Home</a>
+        <a href="{{ url_for('entries') }}">Daily</a>
+        <a href="{{ url_for('stats') }}">Stats</a>
+        <a href="{{ url_for('friends') }}">Friends</a>
+    </div>
+
+
+    <!-- Account circle in the top-right -->
+    <div class="account-circle">
+        <img src="{{ url_for('static', filename='account.png') }}" alt="Account">
+    </div>
+    <div class="account-label">My Profile</div>
+
+    <!-- Page Content -->
+    <h1>ScribeStats</h1>
+    <h2>Writing Analytics</h2>
+
+    <!-- Streak + Prediction side by side -->
+    <div class="stats-container">
+        <div class="stat-box">
+            <h2>🔥 Current Streak</h2>
+            <p>{{ streak }} days</p>
+        </div>
+        <div class="stat-box">
+            <h2>📈 Next Week's Word Count Prediction:</h2>
+            <p>{{ prediction }}</p>
+        </div>
+    </div>
+
+    <!-- Project Totals -->
+    <h2>Project Totals</h2>
+    <div class="entries">
+        {% for project, total in project_totals.items() %}
+        <div class="entry-card">
+            <h3>{{ project }}</h3>
+            <p><strong>Total Words:</strong> {{ total }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

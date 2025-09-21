@@ -1,0 +1,303 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9fc;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Navbar */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4c2e0;
+    padding: 10px 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    border: none;
+    cursor: pointer;
+} */
+
+/* Pink banner background */
+.banner {
+    background-color: pink;
+    height: 54px;  /* adjust to match your navbar height */
+    width: 100%;
+    position: absolute; /* stays behind navbar */
+    top: 0;
+    left: 0;
+    z-index: 0; /* behind navbar */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 15px 30px;
+    position: relative; 
+    z-index: 1; /* above banner */
+}
+
+.navbar a {
+    background-color: #c1fffa;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* .navbar {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+*/
+
+.navbar a {
+    background-color: #c1fffa; /* pretty teal */
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #a3f0eb; /* lighter hover */
+}
+
+.banner { /* pink banner*/
+    background-color: pink;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.account-label {
+    margin-top: 2px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Titles */
+h1 {
+    margin-top: 20px;
+    font-size: 2.2rem;
+    color: #222;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Form */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #f4c2e0;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: #e5a9cf;
+}
+
+/* Stats link */
+.stats-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4a148c;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.stats-link:hover {
+    text-decoration: underline;
+}
+
+/* Entries container */
+.entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.date-group {
+    margin-bottom: 30px;
+}
+
+.date-group h2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.entry-card {
+    background-color: #ffe6f2;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Individual entry card */
+/* .entry-card {
+    background: #f4c2e0;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} */
+
+.entry-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+.entry-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* No entries message */
+.no-entries {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+.account-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    background-color: white;
+}
+
+.account-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.account-label {
+    position: absolute;
+    top: 54px;       /* just under the circle */
+    right: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+.friends-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.friends-container h1 {
+    font-size: 48px;
+    color: #333;
+    background-color: #c1fffa;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.stat-box {
+    background-color: #ffe6f2;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+
+

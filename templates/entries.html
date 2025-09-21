@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScribeStats - Entries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Pink banner (empty, just background) -->
+    
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+        <a href="{{ url_for('home_page') }}">Home</a>
+        <a href="{{ url_for('entries') }}">Daily</a>
+        <a href="{{ url_for('stats') }}">Stats</a>
+        <a href="{{ url_for('friends') }}">Friends</a>
+    </div>
+
+
+</div>
+
+
+    <!-- Title -->
+
+    <h1>ScribeStats</h1>
+    <h2>Recent Entries</h2>
+
+    <!-- Entries Grid -->
+
+    <div class="entries">
+        {% if entries %}
+            {% for entry in entries %}
+                <div class="entry-card">
+                    <h3>{{ entry.project }}</h3>
+                    <p><strong>Date:</strong> {{ entry.date }}</p>
+                    <p><strong>Word Count:</strong> {{ entry.word_count }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-entries">No entries yet — add one above!</p>
+        {% endif %}
+    </div>
+</body>
+
+<h1>Daily Entries</h1>
+
+<!-- Data -->
+
+{% for date, entries in grouped.items() %}
+    <div class="date-group">
+        <h2>{{ date }}</h2>
+        {% for entry in entries %}
+            <div class="entry-card">
+                <p><strong>Project:</strong> {{ entry.project }}</p>
+                <p><strong>Word Count:</strong> {{ entry.word_count }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+</html>

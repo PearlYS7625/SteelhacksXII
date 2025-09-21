@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScribeStats - Add Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Pink banner (empty, just background) -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="{{ url_for('home_page') }}">Home</a>
+        <a href="{{ url_for('entries') }}">Daily</a>
+        <a href="{{ url_for('stats') }}">Stats</a>
+        <a href="{{ url_for('friends') }}">Friends</a>
+    </div>
+
+<!-- <body>
+    <div class="banner">
+        ScribeStats
+    </div> -->
+
+
+
+</div>
+
+    <!-- Account circle in the top-right -->
+    <div class="account-circle">
+        <img src="{{ url_for('static', filename='account.png') }}" alt="Account">
+    </div>
+    <div class="account-label">My Profile</div>
+
+
+    <!-- Title -->
+    <h1>ScribeStats</h1>
+    <h2>Add Daily Word Count</h2>
+
+    <!-- Form -->
+    <form method="POST">
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Word Count:</label>
+        <input type="number" name="word_count" required>
+
+        <label>Project:</label>
+        <input type="text" name="project" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <a class="stats-link" href="{{ url_for('stats') }}">📊 View Stats</a>
+</body>
+</html>
