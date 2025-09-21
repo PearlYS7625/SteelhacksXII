@@ -1,0 +1,27 @@
+# Virtual environment
+venv/
+.venv/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Flask-specific files
+instance/
+.webassets-cache/
+
+# Editor-specific files (e.g., VS Code)
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Sensitive information (e.g., environment variables)
+.env
+*.env
+
+# Logs and temporary files
+*.log
+tmp/

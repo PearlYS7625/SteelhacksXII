@@ -1,18 +1,23 @@
-## Getting Started
+# SteelHackXII: *ScribeStats*
+![ScribeStats](https://github.com/user-attachments/assets/b2852870-1479-468f-bf39-0041badd3389)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+*By: Natalie Goldsworthy, Abby Koss, Pearl Singer, and Jessica Wagner*
 
-## Folder Structure
+### Table of Contents
+- [Overview](#overview)
+- [How It Works](#process)
+- [Video Demonstration](#video-demonstration)
+- [Devpost Submission](#devpost-submission)
 
-The workspace contains two folders by default, where:
+## Overview
+ScribeStats is designed to help writers track their daily progress, stay motivated, and achieve their writing goals. By combining habit tracking with data analytics, the website encourages consistent writing and provides insights into personal productivity.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## How It Works
+<img width="666" height="398" alt="ScribeStatsFlowDiagram" src="https://github.com/user-attachments/assets/38f645ef-082a-4e16-931b-dcfda845fda3" />
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+The **index.html form** is displayed to the user, who enters the date, word count, and associated project for their writing entry. This data is then sent to **app.py**, which stores the entry in an **SQLite database** (creating **database.db** if it doesn’t already exist). The stored data is passed to **analytics.py**, where calculations are performed to determine the current writing streak, total words per project, and predictions for the upcoming week. The results from **analytics.py** are then returned to **app.py**, which renders them in **stats.html** for the user to view. Both **index.html** and **stats.html** use **style.css** for consistent styling.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Video Demonstration
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Devpost Submission
+[devpost.com](https://devpost.com/software/tbd-n8pl3m)
