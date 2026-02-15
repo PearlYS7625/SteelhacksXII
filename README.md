@@ -18,6 +18,8 @@ ScribeStats is designed to help writers track their daily progress, stay motivat
 The **index.html form** is displayed to the user, who enters the date, word count, and associated project for their writing entry. This data is then sent to **app.py**, which stores the entry in an **SQLite database** (creating **database.db** if it doesn’t already exist). The stored data is passed to **analytics.py**, where calculations are performed to determine the current writing streak, total words per project, and predictions for the upcoming week. The results from **analytics.py** are then returned to **app.py**, which renders them in **stats.html** for the user to view. Both **index.html** and **stats.html** use **style.css** for consistent styling.
 
 ## Video Demonstration
+[https://youtu.be/2dxViQmwkp4](https://youtu.be/2dxViQmwkp4)
 
 ## Devpost Submission
 [devpost.com](https://devpost.com/software/tbd-n8pl3m)
+
